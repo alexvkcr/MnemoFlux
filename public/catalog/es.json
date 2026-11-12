@@ -6,7 +6,8 @@
     "bridge": "Gato + pan",
     "meaning": "Abrigo largo y holgado, generalmente de tela gruesa.",
     "association": "Un gato se envuelve en una barra de pan gigantesca que se transforma en un abrigo largo hasta los pies.",
-    "category": "Vocabulario español"
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-galocho",
@@ -138,15 +139,6 @@
     ]
   },
   {
-    "id": "es-herrete",
-    "language": "es",
-    "word": "Herrete",
-    "bridge": "Herrero + té",
-    "meaning": "Remate, generalmente metálico, colocado en los extremos de cordones o cintas para facilitar su introducción en los ojales.",
-    "association": "Un herrero derrama su té hirviendo sobre la punta de un cordón y esta se transforma en un pequeño tubo metálico que atraviesa los ojales.",
-    "category": "Vocabulario español"
-  },
-  {
     "id": "es-heptadactil",
     "language": "es",
     "word": "Heptadáctil",
@@ -165,6 +157,15 @@
     "category": "Vocabulario español"
   },
   {
+    "id": "es-herrete",
+    "language": "es",
+    "word": "Herrete",
+    "bridge": "Herrero + té",
+    "meaning": "Remate, generalmente metálico, colocado en los extremos de cordones o cintas para facilitar su introducción en los ojales.",
+    "association": "Un herrero derrama su té hirviendo sobre la punta de un cordón y esta se transforma en un pequeño tubo metálico que atraviesa los ojales.",
+    "category": "Vocabulario español"
+  },
+  {
     "id": "es-hidrocele",
     "language": "es",
     "word": "Hidrocele",
@@ -174,20 +175,20 @@
     "category": "Vocabulario español"
   },
   {
-    "id": "es-hiponimo",
-    "language": "es",
-    "word": "Hipónimo",
-    "bridge": "Hipo + nombre",
-    "meaning": "Palabra específica incluida en una categoría más general.",
-    "association": "Un hipo (hipopótamo) diminuto lleva escrito el nombre «CANICHE» y entra en un hipermercado gigantesco llamado «PERRO», que contiene todas las razas de perros.",
-    "category": "Vocabulario español"
-  },
-  {
     "id": "es-hiperonimo",
     "language": "es",
     "word": "Hiperónimo",
     "bridge": "Híper + nombre",
     "meaning": "Palabra que designa una categoría general que incluye otras palabras más específicas.",
+    "association": "Un hipo (hipopótamo) diminuto lleva escrito el nombre «CANICHE» y entra en un hipermercado gigantesco llamado «PERRO», que contiene todas las razas de perros.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-hiponimo",
+    "language": "es",
+    "word": "Hipónimo",
+    "bridge": "Hipo + nombre",
+    "meaning": "Palabra específica incluida en una categoría más general.",
     "association": "Un hipo (hipopótamo) diminuto lleva escrito el nombre «CANICHE» y entra en un hipermercado gigantesco llamado «PERRO», que contiene todas las razas de perros.",
     "category": "Vocabulario español"
   },
