@@ -139,8 +139,9 @@
     "word": "Heptadáctil",
     "bridge": "Hepta (siete) + dátil",
     "meaning": "Que tiene siete dedos.",
-    "association": "Una mano monstruosa tiene siete dedos, cada uno formado por un dátil gigantesco que se mueve independientemente.",
-    "category": "Vocabulario español"
+    "association": "Una mano gigantesca tiene siete dedos, y cada dedo hace malabares con un dátil: lo lanza por los aires y vuelve a atraparlo una y otra vez, como si los siete dedos fueran siete malabaristas independientes.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-herboso",
@@ -148,8 +149,9 @@
     "word": "Herboso",
     "bridge": "Hierba + oso",
     "meaning": "Cubierto o abundante en hierba.",
-    "association": "Un oso completamente cubierto de hierba camina por el bosque mientras le crecen plantas por todo el cuerpo.",
-    "category": "Vocabulario español"
+    "association": "Un oso completamente cubierto de hierba camina por un bosque totalmente seco. A medida que avanza, va brotando hierba verde detrás de él, cubriendo todo el suelo por donde pasa.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-herrete",
