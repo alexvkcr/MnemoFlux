@@ -1,1 +1,84 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+name: Publicar cambios de vocabulario
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+concurrency:
+  group: catalog-deployment
+  cancel-in-progress: false
+jobs:
+  update:
+    if: github.event.issue.user.login == github.repository_owner && startsWith(github.event.issue.title, 'catalog:')
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.update.outputs.changed }}
+    steps:
+      - id: update
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+            const match = body.match(/```json\s*([\s\S]*?)\s*```/);
+            if (!match) throw new Error('La solicitud no contiene JSON válido.');
+            const data = JSON.parse(match[1]);
+            if (data.schema !== 1 || !Array.isArray(data.changes) || !data.changes.length || data.changes.length > 20) throw new Error('Lote inválido (1 a 20 cambios).');
+            const allowed = ['es','en','de','fr','it'];
+            const {owner,repo} = context.repo;
+            let files = new Map();
+            for (const change of data.changes) {
+              const required = ['id','language','word','meaning','bridge','association'];
+              if (!change || !required.every(k => typeof change[k] === 'string') || !allowed.includes(change.language) || !/^([a-z]{2})-[a-z0-9-]{1,120}$/.test(change.id) || !change.id.startsWith(change.language + '-') || !['upsert','delete'].includes(change.operation)) throw new Error('Entrada inválida.');
+              if (required.some(k => change[k].length > 3500) || !change.word.trim() || !change.meaning.trim()) throw new Error('Campo vacío o demasiado largo.');
+              if (change.variants && (!Array.isArray(change.variants) || change.variants.some(v=>typeof v!=='string'||v.length>150))) throw new Error('Variantes inválidas.');
+              if (!files.has(change.language)) {
+                let sha=null, entries=[];
+                try {
+                  const response=await github.rest.repos.getContent({owner,repo,path:`public/catalog/${change.language}.json`});
+                  if (Array.isArray(response.data)||response.data.type!=='file') throw new Error('Formato inválido');
+                  sha=response.data.sha;
+                  entries=JSON.parse(Buffer.from(response.data.content,'base64').toString('utf8'));
+                  if(!Array.isArray(entries))throw new Error('El catálogo no es un array');
+                } catch(err) {if(err.status!==404) throw err;}
+                files.set(change.language,{sha,entries});
+              }
+              const current=files.get(change.language);
+              current.entries=current.entries.filter(v=>v.id!==change.id);
+              if(change.operation==='upsert') {
+                const clean={id:change.id,language:change.language,word:change.word.trim(),bridge:change.bridge.trim(),meaning:change.meaning.trim(),association:change.association.trim(),category:typeof change.category==='string'?change.category.slice(0,120):'',variants:change.variants||[]};
+                current.entries.push(clean);
+              }
+            }
+            for (const [lang,file] of files) {
+              await github.rest.repos.createOrUpdateFileContents({owner,repo,path:`public/catalog/${lang}.json`,message:`catalog: actualizar vocabulario ${lang} (#${context.issue.number})`,content:Buffer.from(JSON.stringify(file.entries.sort((a,b)=>a.word.localeCompare(b.word,'es')),null,2)+'\n').toString('base64'),sha:file.sha||undefined});
+            }
+            await github.rest.issues.createComment({owner,repo,issue_number:context.issue.number,body:'✅ Catálogo actualizado. Se publicará con el despliegue de esta automatización.'});
+            await github.rest.issues.update({owner,repo,issue_number:context.issue.number,state:'closed'});
+            core.setOutput('changed','true');
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+      - run: cp dist/index.html dist/404.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v4
