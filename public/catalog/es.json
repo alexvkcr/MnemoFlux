@@ -1,0 +1,356 @@
+[
+  {
+    "id": "es-gaban",
+    "language": "es",
+    "word": "Gabán",
+    "bridge": "Gato + pan",
+    "meaning": "Abrigo largo y holgado, generalmente de tela gruesa.",
+    "association": "Un gato se envuelve en una barra de pan gigantesca que se transforma en un abrigo largo hasta los pies.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-galocho",
+    "language": "es",
+    "word": "Galocho",
+    "bridge": "Galo + ocho",
+    "meaning": "Persona de mala vida; también, dejada o desaliñada.",
+    "association": "Un galo lleva ocho días de juerga, con la ropa rota, despeinado y durmiendo entre basura.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-gaznapiro",
+    "language": "es",
+    "word": "Gaznápiro",
+    "bridge": "Ganso + vampiro",
+    "meaning": "Persona simplona, torpe o poco espabilada.",
+    "association": "Un ganso vampiro intenta morder a alguien, pero es tan torpe que se clava sus propios colmillos y se cae de cabeza.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-gemebundo",
+    "language": "es",
+    "word": "Gemebundo",
+    "bridge": "Gemir + mundo",
+    "meaning": "Que gime mucho o se lamenta continuamente.",
+    "association": "El mundo entero cobra vida y empieza a gemir tan fuerte que sus lamentos hacen temblar los continentes.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-gentio",
+    "language": "es",
+    "word": "Gentío",
+    "bridge": "Gente + tío",
+    "meaning": "Gran cantidad de personas reunidas en un lugar.",
+    "association": "Un tío abre su chaqueta y salen miles de personas, formando un gentío que inunda toda la calle.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-glugluteo",
+    "language": "es",
+    "word": "Glugluteo",
+    "bridge": "Gluglú + Teo",
+    "meaning": "Voz característica del pavo.",
+    "association": "Un pavo gigantesco persigue a Teo gritando «¡gluglú, gluglú!» mientras agita su papada como una campana.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-gobernalle",
+    "language": "es",
+    "word": "Gobernalle",
+    "bridge": "Gobernar + llave",
+    "meaning": "Timón de una embarcación.",
+    "association": "Un capitán intenta gobernar su barco girando una llave gigantesca que hace de timón y mueve toda la nave.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-grebas",
+    "language": "es",
+    "word": "Grebas",
+    "bridge": "Grecas",
+    "meaning": "Piezas de una armadura antigua que protegían las piernas.",
+    "association": "Un caballero lleva unas grecas de hierro gigantes enrolladas alrededor de sus piernas que detienen todas las espadas enemigas.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-gregario",
+    "language": "es",
+    "word": "Gregario",
+    "bridge": "Gregorio",
+    "meaning": "Que sigue las ideas o iniciativas de otros; en ciclismo, corredor que ayuda a su líder.",
+    "association": "Gregorio pedalea detrás de su líder ciclista, empujándolo continuamente mientras él renuncia a adelantarlo.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-hacedero",
+    "language": "es",
+    "word": "Hacedero",
+    "bridge": "Hace + dedo",
+    "meaning": "Que puede hacerse o resulta fácil de realizar.",
+    "association": "Un albañil hace un movimiento con el dedo y construye un rascacielos entero en un segundo, sin ningún esfuerzo.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-halito",
+    "language": "es",
+    "word": "Hálito",
+    "bridge": "Alita",
+    "meaning": "Aliento o aire que sale de la boca.",
+    "association": "Una alita de pollo abre una boca gigantesca y expulsa un hálito tan potente que derriba al cocinero.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-helminto",
+    "language": "es",
+    "word": "Helminto",
+    "bridge": "El Mentos",
+    "meaning": "Gusano parásito, especialmente del organismo humano.",
+    "association": "Un caramelo Mentos gigante se rompe y de su interior sale un enorme gusano parásito que se introduce en un intestino.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-henchido",
+    "language": "es",
+    "word": "Henchido",
+    "bridge": "Hinchado",
+    "meaning": "Lleno, colmado o inflado; también, lleno de orgullo u otro sentimiento.",
+    "association": "Un hombre tan hinchado de orgullo empieza a llenarse de aire hasta convertirse en un globo gigantesco que revienta.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-henchir",
+    "language": "es",
+    "word": "Henchir",
+    "bridge": "Hinchar",
+    "meaning": "Llenar o colmar algo por completo.",
+    "association": "Una persona intenta hinchar un globo soplando, pero este continúa llenándose hasta ocupar toda una ciudad.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-hender",
+    "language": "es",
+    "word": "Hender",
+    "bridge": "Tender / hundir",
+    "meaning": "Abrir o rajar un cuerpo sin dividirlo completamente; también, atravesar un fluido.",
+    "association": "Al tender una sábana, una espada gigantesca cae sobre ella y la hiende, abriendo una enorme raja sin partirla del todo.",
+    "category": "Vocabulario español",
+    "variants": [
+      "Hendir"
+    ]
+  },
+  {
+    "id": "es-herrete",
+    "language": "es",
+    "word": "Herrete",
+    "bridge": "Herrero + té",
+    "meaning": "Remate, generalmente metálico, colocado en los extremos de cordones o cintas para facilitar su introducción en los ojales.",
+    "association": "Un herrero derrama su té hirviendo sobre la punta de un cordón y esta se transforma en un pequeño tubo metálico que atraviesa los ojales.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-heptadactil",
+    "language": "es",
+    "word": "Heptadáctil",
+    "bridge": "Hepta (siete) + dátil",
+    "meaning": "Que tiene siete dedos.",
+    "association": "Una mano monstruosa tiene siete dedos, cada uno formado por un dátil gigantesco que se mueve independientemente.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-herboso",
+    "language": "es",
+    "word": "Herboso",
+    "bridge": "Hierba + oso",
+    "meaning": "Cubierto o abundante en hierba.",
+    "association": "Un oso completamente cubierto de hierba camina por el bosque mientras le crecen plantas por todo el cuerpo.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-hidrocele",
+    "language": "es",
+    "word": "Hidrocele",
+    "bridge": "Hidro (agua) + celo",
+    "meaning": "Acumulación anormal de líquido seroso, especialmente alrededor de un testículo.",
+    "association": "Un testículo queda rodeado por una enorme bolsa transparente llena de agua, que alguien intenta cerrar desesperadamente con cinta de celo.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-hiponimo",
+    "language": "es",
+    "word": "Hipónimo",
+    "bridge": "Hipo + nombre",
+    "meaning": "Palabra específica incluida en una categoría más general.",
+    "association": "Un hipo (hipopótamo) diminuto lleva escrito el nombre «CANICHE» y entra en un hipermercado gigantesco llamado «PERRO», que contiene todas las razas de perros.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-hiperonimo",
+    "language": "es",
+    "word": "Hiperónimo",
+    "bridge": "Híper + nombre",
+    "meaning": "Palabra que designa una categoría general que incluye otras palabras más específicas.",
+    "association": "Un hipo (hipopótamo) diminuto lleva escrito el nombre «CANICHE» y entra en un hipermercado gigantesco llamado «PERRO», que contiene todas las razas de perros.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-hirsuto",
+    "language": "es",
+    "word": "Hirsuto",
+    "bridge": "Ir + susto",
+    "meaning": "Dicho del pelo: áspero, duro o erizado; dicho de una persona: de pelo abundante y desordenado.",
+    "association": "Un hombre va a dar un susto, pero su pelo se eriza tanto que se convierte en miles de púas rígidas que atraviesan el techo.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-hisopo",
+    "language": "es",
+    "word": "Hisopo",
+    "bridge": "Y sopa",
+    "meaning": "Planta aromática; también, utensilio utilizado para rociar agua bendita.",
+    "association": "Un sacerdote grita «¡Y sopa!» mientras agita una enorme planta aromática que lanza chorros de agua bendita por toda la iglesia.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-holonimo",
+    "language": "es",
+    "word": "Holónimo",
+    "bridge": "Holograma + Nemo",
+    "meaning": "Palabra que designa un todo respecto de las palabras que nombran sus partes.",
+    "association": "Un holograma de Nemo se descompone en aletas, cola y cabeza, que vuelven a unirse para formar el pez entero.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-horadar",
+    "language": "es",
+    "word": "Horadar",
+    "bridge": "Hora + dar",
+    "meaning": "Perforar o agujerear algo atravesándolo de parte a parte.",
+    "association": "Un reloj gigante empieza a dar la hora y, con cada campanada, su aguja perfora completamente una pared de hormigón.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-hornacina",
+    "language": "es",
+    "word": "Hornacina",
+    "bridge": "Horno + China",
+    "meaning": "Hueco practicado en una pared para colocar una estatua, imagen u objeto decorativo.",
+    "association": "Una enorme estatua de China sale de un horno y se incrusta en un hueco de la pared, quedando expuesta como decoración.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-hostigar",
+    "language": "es",
+    "word": "Hostigar",
+    "bridge": "Hostia + garra",
+    "meaning": "Acosar, perseguir o molestar insistentemente a alguien.",
+    "association": "Una hostia gigantesca adquiere unas garras enormes y persigue a un hombre sin descanso, arañándolo cada vez que intenta escapar.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-idiosincrasia",
+    "language": "es",
+    "word": "Idiosincrasia",
+    "bridge": "Idiota + sin gracia",
+    "meaning": "Conjunto de rasgos, carácter y comportamientos propios que distinguen a una persona o colectividad.",
+    "association": "Un idiota sin gracia, vestido de payaso, tiene la peculiar costumbre de caminar sobre las manos y saludar con los pies, y todos lo reconocen por esa forma tan particular de ser.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-ignoto",
+    "language": "es",
+    "word": "Ignoto",
+    "bridge": "Higo + moto",
+    "meaning": "Desconocido, no descubierto o no explorado.",
+    "association": "Un higo gigantesco conduce una moto hacia una región completamente desconocida, representada por un enorme espacio en blanco en el mapa.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-impasse",
+    "language": "es",
+    "word": "Impasse",
+    "bridge": "Sin pase",
+    "meaning": "Situación de estancamiento o difícil solución; también, compás de espera.",
+    "association": "Dos negociadores quedan atrapados frente a una puerta porque están sin pase para cruzarla; discuten inmóviles mientras un reloj gira sin avanzar.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-impeler",
+    "language": "es",
+    "word": "Impeler",
+    "bridge": "Imán + Pelé",
+    "meaning": "Empujar o impulsar algo o a alguien para producir movimiento; también, estimular a actuar.",
+    "association": "Un imán gigantesco empieza a empujar a Pelé por el campo de fútbol, lanzándolo a toda velocidad sin que pueda detenerse.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-impelido",
+    "language": "es",
+    "word": "Impelido",
+    "bridge": "Pedido",
+    "meaning": "Empujado o impulsado por una fuerza física o una motivación.",
+    "association": "Un pedido enorme es empujado violentamente por un chorro de aire y sale disparado por los aires hasta atravesar una pared.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-imprecar",
+    "language": "es",
+    "word": "Imprecar",
+    "bridge": "Imprimir + cara",
+    "meaning": "Proferir maldiciones contra alguien o algo.",
+    "association": "Una impresora empieza a imprimir caras gigantes que cobran vida y lanzan terribles maldiciones contra todo el mundo.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-in-illo-tempore",
+    "language": "es",
+    "word": "In illo tempore",
+    "bridge": "Hilo + temporal",
+    "meaning": "Expresión latina que significa «en aquel tiempo», generalmente referido a un pasado remoto.",
+    "association": "Un hilo larguísimo atraviesa un temporal, se engancha a un reloj y tira de sus agujas hacia atrás hasta llevarnos miles de años al pasado.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-incolume",
+    "language": "es",
+    "word": "Incólume",
+    "bridge": "En columna",
+    "meaning": "Que permanece sin daño o lesión después de un peligro.",
+    "association": "Tras un terremoto devastador, todos los edificios se derrumban, pero una persona permanece en una columna, completamente intacta y sin un solo rasguño.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-infausto",
+    "language": "es",
+    "word": "Infausto",
+    "bridge": "Un Fausto",
+    "meaning": "Desgraciado, funesto o que anuncia o produce desdichas.",
+    "association": "Fausto abre un regalo de cumpleaños y de su interior sale un rayo gigantesco que destruye su casa y convierte su celebración en una tragedia.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-innumero",
+    "language": "es",
+    "word": "Innúmero",
+    "bridge": "Un número",
+    "meaning": "Incontable o tan abundante que no puede reducirse a un número determinado.",
+    "association": "De un número escrito en una pizarra empiezan a brotar infinitos números que se multiplican hasta cubrir todo el planeta.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-inulto",
+    "language": "es",
+    "word": "Inulto",
+    "bridge": "Insulto",
+    "meaning": "No vengado; también, no castigado o impune.",
+    "association": "Un delincuente lanza un terrible insulto, destroza un escaparate y se marcha riendo mientras la policía lo observa sin castigarlo.",
+    "category": "Vocabulario español"
+  },
+  {
+    "id": "es-iza",
+    "language": "es",
+    "word": "Iza",
+    "bridge": "Izar",
+    "meaning": "Prostituta; voz antigua de germanía.",
+    "association": "Una prostituta iza una bandera gigantesca sobre la puerta de un burdel, tan grande que cubre toda la fachada.",
+    "category": "Vocabulario español"
+  }
+]
