@@ -44,3 +44,25 @@
 .review-history-row:last-child{border-bottom:0}
 @media(max-width:790px){.review-toolbar{flex-wrap:wrap}.review-toolbar select{flex:1;width:100%}.review-modal{padding:19px}}
 @media(max-width:450px){.review-overview{gap:7px}.review-overview>div{padding:11px 8px}.review-overview strong{font-size:20px}.review-overview span{font-size:10px}.review-numbers{grid-template-columns:repeat(2,minmax(0,1fr))}.review-meta{grid-template-columns:105px minmax(0,1fr)}.review-word-row{padding:15px 14px}.review-modal-header h2{font-size:23px}}
+
+
+/* Navegación móvil: acceso permanente a todas las secciones */
+.mobile-menu-toggle,.mobile-drawer,.mobile-drawer-backdrop{display:none}
+@media(max-width:790px){
+  .mobile-brand{gap:9px}
+  .mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center;flex:none;width:40px;height:42px;border:1px solid #36364d;background:#1c1d30;color:#e1d8ff;border-radius:10px;padding:0;margin-right:3px}
+  .mobile-menu-toggle:hover{background:#2a2541}
+  .mobile-drawer-backdrop{display:block;position:fixed;inset:0;width:100%;height:100%;border:0;background:#080812cf;z-index:69;cursor:pointer}
+  .mobile-drawer{display:flex;position:fixed;top:0;left:0;bottom:0;width:min(330px,87vw);background:#151625;border-right:1px solid #48425e;box-shadow:15px 0 42px #02020899;z-index:70;flex-direction:column;padding:23px 16px max(20px,env(safe-area-inset-bottom));overflow-y:auto}
+  .mobile-drawer-header{display:flex;justify-content:space-between;align-items:center;padding:2px 6px 21px;gap:10px;border-bottom:1px solid #33334a;margin-bottom:16px}
+  .mobile-drawer-title{display:flex;align-items:center;gap:10px}
+  .mobile-drawer-title strong{font-family:Outfit,sans-serif;font-size:21px;font-weight:800}
+  .mobile-drawer-title strong span{color:#a999ff}
+  .mobile-drawer nav{display:flex;flex-direction:column;gap:6px}
+  .mobile-drawer .nav-item{width:100%;display:flex;align-items:center;gap:14px;padding:15px 16px;font-size:15px;text-align:left;color:#aeaec8;border:0;border-radius:12px;background:transparent}
+  .mobile-drawer .nav-item.active{background:#30264e;color:#e3daff}
+  .mobile-drawer .nav-item.active svg{color:#b9a4ff}
+  .mobile-drawer .nav-item:hover{background:#26243d;color:#fff}
+  .mobile-drawer-footer{margin-top:auto;border-top:1px solid #33334a;padding:19px 10px 0;font-size:11px;color:#9292a9;line-height:1.5}
+  .mobile-nav button{min-width:0}
+}
