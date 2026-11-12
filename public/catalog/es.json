@@ -271,8 +271,9 @@
     "word": "Impasse",
     "bridge": "Sin pase",
     "meaning": "Situación de estancamiento o difícil solución; también, compás de espera.",
-    "association": "Dos negociadores quedan atrapados frente a una puerta porque están sin pase para cruzarla; discuten inmóviles mientras un reloj gira sin avanzar.",
-    "category": "Vocabulario español"
+    "association": "Cuando vas a cruzar una puerta, tu pase cobra vida y sale volando. La puerta se convierte en un gigantesco muro de hielo que te congela los pies. Empujas con todas tus fuerzas, pero no consigues avanzar ni un centímetro.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-impeler",
@@ -281,15 +282,6 @@
     "bridge": "Imán + Pelé",
     "meaning": "Empujar o impulsar algo o a alguien para producir movimiento; también, estimular a actuar.",
     "association": "Un imán gigantesco empieza a empujar a Pelé por el campo de fútbol, lanzándolo a toda velocidad sin que pueda detenerse.",
-    "category": "Vocabulario español"
-  },
-  {
-    "id": "es-impelido",
-    "language": "es",
-    "word": "Impelido",
-    "bridge": "Pedido",
-    "meaning": "Empujado o impulsado por una fuerza física o una motivación.",
-    "association": "Un pedido enorme es empujado violentamente por un chorro de aire y sale disparado por los aires hasta atravesar una pared.",
     "category": "Vocabulario español"
   },
   {
@@ -316,17 +308,19 @@
     "word": "Incólume",
     "bridge": "En columna",
     "meaning": "Que permanece sin daño o lesión después de un peligro.",
-    "association": "Tras un terremoto devastador, todos los edificios se derrumban, pero una persona permanece en una columna, completamente intacta y sin un solo rasguño.",
-    "category": "Vocabulario español"
+    "association": "Tras un terremoto devastador, todos los edificios se derrumban excepto una columna. Sobre ella, una persona sigue tumbada en una tumbona, tomando tranquilamente un daiquiri, sin derramar una gota y sin sufrir un rasguño.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-infausto",
     "language": "es",
     "word": "Infausto",
-    "bridge": "Un Fausto",
+    "bridge": "Infarto + susto",
     "meaning": "Desgraciado, funesto o que anuncia o produce desdichas.",
-    "association": "Fausto abre un regalo de cumpleaños y de su interior sale un rayo gigantesco que destruye su casa y convierte su celebración en una tragedia.",
-    "category": "Vocabulario español"
+    "association": "Durante una boda, un fantasma gigantesco sale de la tarta. El novio sufre un infarto del susto y la celebración termina en una auténtica tragedia.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-innumero",
@@ -343,8 +337,9 @@
     "word": "Inulto",
     "bridge": "Insulto",
     "meaning": "No vengado; también, no castigado o impune.",
-    "association": "Un delincuente lanza un terrible insulto, destroza un escaparate y se marcha riendo mientras la policía lo observa sin castigarlo.",
-    "category": "Vocabulario español"
+    "association": "Un encapuchado ata y amordaza al Zorro, lo insulta y destroza un escaparate. Mientras el encapuchado se marcha riendo, el Zorro se retuerce violentamente, forcejea con las cuerdas e intenta desatarse para abalanzarse sobre él y vengarse, pero no lo consigue.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-iza",
@@ -352,7 +347,8 @@
     "word": "Iza",
     "bridge": "Izar",
     "meaning": "Prostituta; voz antigua de germanía.",
-    "association": "Una prostituta iza una bandera gigantesca sobre la puerta de un burdel, tan grande que cubre toda la fachada.",
-    "category": "Vocabulario español"
+    "association": "Una prostituta con medias de rejilla, minifalda extremadamente corta y llamativa, tacones, pechos descubiertos, uñas largas, maquillaje corrido y un cigarrillo en la boca iza una bandera gigantesca sobre un burdel.",
+    "category": "Vocabulario español",
+    "variants": []
   }
 ]
