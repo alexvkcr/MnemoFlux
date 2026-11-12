@@ -18,9 +18,9 @@ jobs:
       - name: Restore project source
         run: |
           cat source.part.* | base64 -d | tar xz
-          rm -f source.part.* source.tar.gz.b64
-          git rm -q source.part.* source.tar.gz.b64 .github/workflows/bootstrap.yml
-      - name: Commit project
+          rm -f source.part.* source.tar.gz.b64 .github/workflows/catalog-issue.yml .github/workflows/deploy.yml
+          git rm -q source.part.* source.tar.gz.b64
+      - name: Commit project source without workflow updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
