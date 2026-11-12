@@ -13,10 +13,11 @@
     "id": "es-galocho",
     "language": "es",
     "word": "Galocho",
-    "bridge": "Galo + ocho",
+    "bridge": "Galo + hacha (casillero 8)",
     "meaning": "Persona de mala vida; también, dejada o desaliñada.",
-    "association": "Un galo lleva ocho días de juerga, con la ropa rota, despeinado y durmiendo entre basura.",
-    "category": "Vocabulario español"
+    "association": "Un galo vuelve borracho de una juerga e intenta peinarse con un hacha gigantesca. Se arranca mechones de pelo, destroza su ropa y termina durmiendo entre basura, completamente desaliñado.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-gaznapiro",
@@ -67,19 +68,21 @@
     "id": "es-grebas",
     "language": "es",
     "word": "Grebas",
-    "bridge": "Grecas",
+    "bridge": "Grapas",
     "meaning": "Piezas de una armadura antigua que protegían las piernas.",
-    "association": "Un caballero lleva unas grecas de hierro gigantes enrolladas alrededor de sus piernas que detienen todas las espadas enemigas.",
-    "category": "Vocabulario español"
+    "association": "Un caballero se coloca dos grapas metálicas gigantes sobre las espinillas. Un enemigo intenta cortarle las piernas con una espada, pero las grapas detienen todos los golpes.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-gregario",
     "language": "es",
     "word": "Gregario",
-    "bridge": "Gregorio",
+    "bridge": "Gregoria",
     "meaning": "Que sigue las ideas o iniciativas de otros; en ciclismo, corredor que ayuda a su líder.",
-    "association": "Gregorio pedalea detrás de su líder ciclista, empujándolo continuamente mientras él renuncia a adelantarlo.",
-    "category": "Vocabulario español"
+    "association": "Gregoria, la de «¡Ay, Gregoria!», pedalea detrás de su líder ciclista y lo empuja con todas sus fuerzas hasta la meta, sin adelantarlo jamás.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-hacedero",
@@ -105,17 +108,9 @@
     "word": "Helminto",
     "bridge": "El Mentos",
     "meaning": "Gusano parásito, especialmente del organismo humano.",
-    "association": "Un caramelo Mentos gigante se rompe y de su interior sale un enorme gusano parásito que se introduce en un intestino.",
-    "category": "Vocabulario español"
-  },
-  {
-    "id": "es-henchido",
-    "language": "es",
-    "word": "Henchido",
-    "bridge": "Hinchado",
-    "meaning": "Lleno, colmado o inflado; también, lleno de orgullo u otro sentimiento.",
-    "association": "Un hombre tan hinchado de orgullo empieza a llenarse de aire hasta convertirse en un globo gigantesco que revienta.",
-    "category": "Vocabulario español"
+    "association": "Te tragas un Mentos que, al llegar a tu barriga, se transforma en un gusano parásito gigantesco. Se retuerce dentro de ti y hace que tu abdomen se mueva como si tuvieses una serpiente bajo la piel.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-henchir",
@@ -171,8 +166,9 @@
     "word": "Hidrocele",
     "bridge": "Hidro (agua) + celo",
     "meaning": "Acumulación anormal de líquido seroso, especialmente alrededor de un testículo.",
-    "association": "Un testículo queda rodeado por una enorme bolsa transparente llena de agua, que alguien intenta cerrar desesperadamente con cinta de celo.",
-    "category": "Vocabulario español"
+    "association": "Un hombre se baja los pantalones y descubre que su escroto se ha vuelto transparente y se está hinchando como un enorme globo lleno de agua alrededor de un testículo. Intenta desesperadamente cerrarlo con cinta de celo.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-hiperonimo",
@@ -187,10 +183,11 @@
     "id": "es-hiponimo",
     "language": "es",
     "word": "Hipónimo",
-    "bridge": "Hipo + nombre",
+    "bridge": "Hipo + niño",
     "meaning": "Palabra específica incluida en una categoría más general.",
-    "association": "Un hipo (hipopótamo) diminuto lleva escrito el nombre «CANICHE» y entra en un hipermercado gigantesco llamado «PERRO», que contiene todas las razas de perros.",
-    "category": "Vocabulario español"
+    "association": "Un hipopótamo lleva a un niño diminuto en la boca y lo escupe dentro de una multitud gigantesca de personas de todas las edades. El niño es un tipo específico de persona.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-hirsuto",
@@ -225,8 +222,9 @@
     "word": "Horadar",
     "bridge": "Hora + dar",
     "meaning": "Perforar o agujerear algo atravesándolo de parte a parte.",
-    "association": "Un reloj gigante empieza a dar la hora y, con cada campanada, su aguja perfora completamente una pared de hormigón.",
-    "category": "Vocabulario español"
+    "association": "Estás en el puente junto al Big Ben cuando empiezan a caer rocas gigantescas. Miras hacia arriba y descubres que el enorme segundero del reloj está atravesando las rocas de lado a lado, horadándolas y haciendo que caigan sus fragmentos.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-hornacina",
@@ -234,8 +232,9 @@
     "word": "Hornacina",
     "bridge": "Horno + China",
     "meaning": "Hueco practicado en una pared para colocar una estatua, imagen u objeto decorativo.",
-    "association": "Una enorme estatua de China sale de un horno y se incrusta en un hueco de la pared, quedando expuesta como decoración.",
-    "category": "Vocabulario español"
+    "association": "Un guerrero de terracota chino sale de un horno y avanza rígidamente, deslizándose sin articular las piernas. Llega a un hueco en la pared, se introduce en él y se queda completamente inmóvil, convertido en estatua.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-hostigar",
@@ -252,8 +251,9 @@
     "word": "Idiosincrasia",
     "bridge": "Idiota + sin gracia",
     "meaning": "Conjunto de rasgos, carácter y comportamientos propios que distinguen a una persona o colectividad.",
-    "association": "Un idiota sin gracia, vestido de payaso, tiene la peculiar costumbre de caminar sobre las manos y saludar con los pies, y todos lo reconocen por esa forma tan particular de ser.",
-    "category": "Vocabulario español"
+    "association": "Un payaso vestido de luto intenta hacer reír, pero nadie se ríe. Además, tiene una costumbre rarísima: siempre saluda haciendo el pino y dando la mano con el pie. Todos lo reconocen por esa forma tan peculiar de comportarse.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-ignoto",
@@ -261,8 +261,9 @@
     "word": "Ignoto",
     "bridge": "Higo + moto",
     "meaning": "Desconocido, no descubierto o no explorado.",
-    "association": "Un higo gigantesco conduce una moto hacia una región completamente desconocida, representada por un enorme espacio en blanco en el mapa.",
-    "category": "Vocabulario español"
+    "association": "Visto desde arriba, como en Age of Empires, un higo gigantesco conduce una moto por un mapa. Se adentra en una zona desconocida, cubierta por una neblina negra, que va desapareciendo a medida que avanza y descubre el terreno.",
+    "category": "Vocabulario español",
+    "variants": []
   },
   {
     "id": "es-impasse",
