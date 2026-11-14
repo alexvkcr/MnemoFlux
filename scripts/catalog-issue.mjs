@@ -7,7 +7,7 @@ const imagePath=id=>`public/images/${id}.webp`;
 const canonicalImage=id=>`images/${id}.webp`;
 const validId=id=>typeof id==='string'&&/^([a-z]{2})-[a-z0-9-]{1,120}$/.test(id);
 const issueImageRe=/!\[([^\]]+)\]\((https:\/\/[^\s)]+)\)/g;
-function attachmentMap(body){
+export function attachmentMap(body){
  const clean=body.replace(/```[\s\S]*?```/g,'');
  const images=new Map();
  for(const match of clean.matchAll(issueImageRe)){
@@ -34,7 +34,7 @@ async function fetchImage(url){
  if(optimized.length>2*1024*1024)throw Error('La imagen optimizada supera 2 MB.');
  return optimized;
 }
-function validateChange(change){
+export function validateChange(change){
  if(!change||!validId(change.id)||!LANGUAGES.has(change.language)||!change.id.startsWith(change.language+'-'))throw Error('Identificador o idioma inválido.');
  if(!['upsert','patch','delete'].includes(change.operation))throw Error('Operación inválida.');
  for(const key of REQUIRED){
