@@ -11,7 +11,7 @@ Entrenador de vocabulario con asociaciones inverosímiles, repasos activos y seg
 - **Segundas oportunidades:** los fallos reaparecen al final de la sesión sin borrar el intento fallido ni inflar la progresión.
 - **Estados:** Nueva, Aprendiendo, Consolidando y Dominada. Umbrales configurables en `src/config/learning.ts`.
 - **Órdenes:** aleatorio, alfabético, prioridad de falladas, solo pendientes y combinación de falladas y pendientes.
-- **Direcciones:** definición → palabra (predeterminada), o palabra → definición.
+- **Direcciones:** definición → palabra (predeterminada), palabra → definición y asociación → palabra/definición (solo mental/verbal; no afecta al dominio).
 - **Respuestas:** autocalificación mental/verbal o escritura de la palabra; se reconocen variantes explícitas y locuciones con espacios repetidos, manteniendo las tildes.
 - **Personalización:** sesiones de 10, 20, 30, 40 o todas; favoritos, búsqueda, estadísticas, filtros y selección multidioma.
 - **Imágenes:** una ilustración opcional por palabra. Visible en Descubrir, al revelar la asociación en los repasos tradicionales y desde el inicio en el repaso basado en asociación.
@@ -22,9 +22,9 @@ Entrenador de vocabulario con asociaciones inverosímiles, repasos activos y seg
 
 Las palabras y asociaciones están publicadas como JSON en `public/catalog/es.json`. El catálogo español se amplía mediante issues y se comparte entre dispositivos. Se pueden añadir archivos como `public/catalog/en.json` y `public/catalog/de.json` para activar otros idiomas sin cambiar el motor.
 
-### Editar el vocabulario exclusivamente con GitHub Issues
+### Contribuir mediante Issues o commits autorizados
 
-No hay formularios de edición de vocabulario dentro de la aplicación. Las palabras, asociaciones e imágenes se mantienen en el repositorio mediante [GitHub Issues](https://github.com/alexvkcr/MnemoFlux/issues/new).
+No hay formularios de edición de vocabulario dentro de la aplicación. **Cualquier persona puede proponer** palabras, asociaciones e imágenes mediante [GitHub Issues](https://github.com/alexvkcr/MnemoFlux/issues/new); el propietario es quien decide qué se publica. También pueden utilizarse commits directos autorizados. Para los ejemplos y las aprobaciones consulta [la guía de Issues](docs/ISSUES.md) y las [reglas de arquitectura](rules/PROJECT_RULES.md).
 
 La acción `.github/workflows/catalog-issue.yml` solo procesa issues creadas por el propietario cuyo título comience por `catalog:`. La issue debe incluir un bloque JSON con `schema: 1` y entre 1 y 20 cambios. `operation` puede ser `upsert` (alta o actualización), `patch` (cambio parcial de una entrada existente) o `delete` (eliminar entrada). Una actualización parcial no borra los campos omitidos.
 
@@ -54,7 +54,7 @@ Antes de publicar la issue, arrastra o pega una imagen en el cuerpo **fuera del 
 
 Para eliminar la imagen sin modificar el texto, usa `"operation":"patch","image":"remove"` (sin adjuntar archivo). Para sustituirla, usa `"image":"set"` con otro adjunto; reemplaza a la anterior en una sola publicación. Si no se especifica `image`, conserva la actual. Un `delete` elimina la entrada y su imagen.
 
-La automatización valida el lote y publica los cambios en un **solo commit**. Los archivos se guardan como `public/images/<id>.webp`. No hacen falta tokens ni contraseñas en la aplicación.
+La automatización valida el lote y publica los cambios en un **solo commit**; también admite la ruta alternativa de commit directo autorizado. Los archivos se guardan como `public/images/<id>.webp`. No hacen falta tokens ni contraseñas en la aplicación.
 
 ## Reglas de repaso
 
@@ -71,7 +71,9 @@ npm run build
 
 Tecnologías: React 19, TypeScript, Vite, Lucide y IndexedDB.
 
-Cada push a `main` ejecuta las pruebas, compila y despliega a GitHub Pages mediante `.github/workflows/deploy.yml`.
+Cada push a `main` ejecuta las pruebas, compila y despliega a GitHub Pages mediante `.github/workflows/deploy.yml`. Las publicaciones desde issues conservan su despliegue explícito.
+
+**Agentes y escalabilidad:** consulta [AGENTS.md](AGENTS.md) y [rules/PROJECT_RULES.md](rules/PROJECT_RULES.md) para las invariantes, las dos vías de publicación y el crecimiento previsto a 900–1.200 entradas.
 
 ## Privacidad y limitaciones
 

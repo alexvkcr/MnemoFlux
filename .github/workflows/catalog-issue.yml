@@ -1,7 +1,7 @@
 name: Publicar cambios de vocabulario
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]
 permissions:
   contents: write
   issues: write
@@ -12,7 +12,13 @@ concurrency:
   cancel-in-progress: false
 jobs:
   update:
-    if: github.event.issue.user.login == github.repository_owner && startsWith(github.event.issue.title, 'catalog:')
+    if: >-
+      github.event.issue.state == 'open' &&
+      startsWith(github.event.issue.title, 'catalog:') &&
+      (
+        (github.event.action == 'opened' && github.event.issue.user.login == github.repository_owner) ||
+        (github.event.action == 'labeled' && github.event.label.name == 'catalog:approved' && github.event.sender.login == github.repository_owner)
+      )
     runs-on: ubuntu-latest
     outputs:
       changed: ${{ steps.update.outputs.changed }}
@@ -29,7 +35,12 @@ jobs:
         with:
           script: |
             const {processCatalogIssue}=await import(`${process.env.GITHUB_WORKSPACE}/scripts/catalog-issue.mjs`);
-            await processCatalogIssue({github,context,core});
+            try {
+              await processCatalogIssue({github,context,core});
+            } catch (error) {
+              await github.rest.issues.createComment({owner:context.repo.owner,repo:context.repo.repo,issue_number:context.issue.number,body:'❌ Propuesta no publicada: '+String(error.message||error).slice(0,1000)});
+              throw error;
+            }
   deploy:
     needs: update
     if: needs.update.outputs.changed == 'true'
