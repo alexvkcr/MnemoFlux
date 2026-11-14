@@ -17,7 +17,7 @@ export function distinctReviewDays(attempts) {
 }
 export function stateFor(wordId, discoveries, allAttempts, policy = DEFAULT_POLICY) {
   if (!discoveries.some(d => d.wordId === wordId)) return 'new';
-  const attempts = allAttempts.filter(a => a.wordId === wordId && !a.repeatInSession).sort((a,b) => a.timestamp-b.timestamp);
+  const attempts = allAttempts.filter(a => a.wordId === wordId && !a.repeatInSession && a.direction !== 'association-to-word-meaning').sort((a,b) => a.timestamp-b.timestamp);
   const success = attempts.filter(a => a.grade !== 'miss');
   if (!attempts.length) return 'learning';
   let failures = 0;
@@ -43,7 +43,7 @@ export function stateFor(wordId, discoveries, allAttempts, policy = DEFAULT_POLI
 export function nextDueAt(wordId, discoveries, allAttempts, policy=DEFAULT_POLICY) {
   const discovered = discoveries.find(d=>d.wordId === wordId);
   if (!discovered) return null;
-  const attempts=allAttempts.filter(a=>a.wordId===wordId && !a.repeatInSession).sort((a,b)=>a.timestamp-b.timestamp);
+  const attempts=allAttempts.filter(a=>a.wordId===wordId && !a.repeatInSession && a.direction!=='association-to-word-meaning').sort((a,b)=>a.timestamp-b.timestamp);
   if (!attempts.length) return discovered.timestamp;
   const last=attempts.at(-1);
   let days=policy.intervals.missDays;
@@ -62,7 +62,7 @@ export function shuffle(list, random=Math.random) {
 export function orderEntries(entries, mode, attempts, discoveries, now=Date.now()) {
   if (mode==='random') return shuffle(entries);
   if (mode==='alphabetical') return [...entries].sort((a,b)=>a.word.localeCompare(b.word,'es'));
-  const lastGrade=id=>[...attempts].reverse().find(a=>a.wordId===id && !a.repeatInSession)?.grade;
+  const lastGrade=id=>[...attempts].reverse().find(a=>a.wordId===id && !a.repeatInSession && a.direction!=='association-to-word-meaning')?.grade;
   const due=id=>{const date=nextDueAt(id,discoveries,attempts);return date!==null && date<=now;};
   const score=e=>{
     const failed=lastGrade(e.id)==='miss';const pending=due(e.id);

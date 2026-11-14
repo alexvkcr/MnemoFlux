@@ -7,10 +7,11 @@ export interface VocabEntry {
   bridge: string;
   meaning: string;
   association: string;
+  image?: string;
   category?: string;
 }
 export type RecallGrade = 'immediate' | 'association' | 'hint' | 'miss';
-export type Direction = 'meaning-to-word' | 'word-to-meaning';
+export type Direction = 'meaning-to-word' | 'word-to-meaning' | 'association-to-word-meaning';
 export type Activity = 'discover' | 'review';
 export interface Attempt {
   id: string;

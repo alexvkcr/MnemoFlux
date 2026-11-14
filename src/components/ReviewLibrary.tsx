@@ -2,6 +2,7 @@ import {useEffect,useMemo,useState} from 'react';
 import {Heart,Search,X} from 'lucide-react';
 import {nextDueAt,stateFor} from '../lib/engine';
 import type {Language,LocalState,RecallGrade,VocabEntry} from '../types';
+import {AssociationImage} from './AssociationImage';
 
 type Filter='all'|'new'|'discovered'|'due'|'learning'|'consolidating'|'mastered';
 type Item={entry:VocabEntry;status:string;dueAt:number|null};
@@ -26,7 +27,8 @@ export default function ReviewLibrary({entries,state,languages}:Props){
  ).sort((a,b)=>a.entry.word.localeCompare(b.entry.word,'es'));
  const detail=items.find(x=>x.entry.id===selectedId);
  const attempts=detail?state.attempts.filter(a=>a.wordId===detail.entry.id).slice().sort((a,b)=>a.timestamp-b.timestamp):[];
- const reviews=attempts.filter(a=>!a.repeatInSession);
+ const reviews=attempts.filter(a=>!a.repeatInSession && a.direction!=='association-to-word-meaning');
+ const assisted=attempts.filter(a=>!a.repeatInSession && a.direction==='association-to-word-meaning');
  const correct=reviews.filter(a=>a.grade!=='miss').length;
  const misses=reviews.filter(a=>a.grade==='miss').length;
  const discoveredAt=state.discoveries.find(d=>d.wordId===selectedId)?.timestamp;
@@ -75,7 +77,7 @@ export default function ReviewLibrary({entries,state,languages}:Props){
     <div className="review-detail">
      <h3>Significado</h3><p>{detail.entry.meaning}</p>
      <h3>Imagen o palabra puente</h3><p>{detail.entry.bridge}</p>
-     <h3>Asociación inverosímil</h3><p className="review-association">{detail.entry.association}</p>
+     <h3>Asociación inverosímil</h3><p className="review-association">{detail.entry.association}</p><AssociationImage entry={detail.entry}/>
      {!!detail.entry.variants?.length&&<><h3>Variantes admitidas</h3><p>{detail.entry.variants.join(', ')}</p></>}
      {!!detail.entry.category&&<p className="review-category">Categoría: {detail.entry.category}</p>}
     </div>
@@ -85,14 +87,14 @@ export default function ReviewLibrary({entries,state,languages}:Props){
       <div><strong>{reviews.length}</strong><span>Repasos</span></div>
       <div><strong>{correct}</strong><span>Aciertos</span></div>
       <div><strong>{misses}</strong><span>Fallos</span></div>
-      <div><strong>{attempts.length-reviews.length}</strong><span>Segundas oportunidades</span></div>
+      <div><strong>{attempts.filter(a=>a.repeatInSession && a.direction!=='association-to-word-meaning').length}</strong><span>Segundas oportunidades</span></div><div><strong>{assisted.length}</strong><span>Asociación visible</span></div>
      </div>
      <div className="review-meta">
       <span>Descubierta</span><strong>{discoveredAt===undefined?'Sin descubrir':formatDate(discoveredAt)}</strong>
       <span>Último repaso</span><strong>{lastReview?formatDate(lastReview.timestamp)+' · '+grades[lastReview.grade]:'Sin repasos'}</strong>
       <span>Próximo repaso</span><strong>{detail.dueAt===null?'No programado':detail.dueAt<=now?'Pendiente':formatDate(detail.dueAt)}</strong>
      </div>
-     {!!attempts.length&&<div className="review-history"><h3>Últimos intentos</h3>{attempts.slice(-5).reverse().map(a=><div key={a.id} className="review-history-row"><span>{formatDate(a.timestamp)}{a.repeatInSession?' · segunda oportunidad':''}</span><span className={'pill '+a.grade}>{grades[a.grade]}</span></div>)}</div>}
+     {!!attempts.length&&<div className="review-history"><h3>Últimos intentos</h3>{attempts.slice(-5).reverse().map(a=><div key={a.id} className="review-history-row"><span>{formatDate(a.timestamp)}{a.direction==='association-to-word-meaning'?' · asociación visible':''}{a.repeatInSession?' · segunda oportunidad':''}</span><span className={'pill '+a.grade}>{a.direction==='association-to-word-meaning'?({immediate:'Completo',association:'Parcial',hint:'Con pista',miss:'Fallo'} as Record<RecallGrade,string>)[a.grade]:grades[a.grade]}</span></div>)}</div>}
     </section>
    </div>
   </div>}
