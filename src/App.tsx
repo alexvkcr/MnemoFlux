@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
-import { BookOpen, BrainCircuit, ChartNoAxesCombined, ChevronDown, Check, ListChecks, Menu, CircleHelp, Clock3, Download, FileUp, Github, Heart, Languages, Library, Plus, RotateCcw, Search, Settings2, Sparkles, X } from 'lucide-react';
+import { BookOpen, BrainCircuit, ChartNoAxesCombined, ChevronDown, Check, ListChecks, Menu, CircleHelp, Clock3, Download, FileUp, Github, Heart, Languages, Library, RotateCcw, Search, Settings2, Sparkles, X } from 'lucide-react';
 import type { Activity, Attempt, Direction, Filters, Language, LocalState, RecallGrade, VocabEntry } from './types';
 import { emptyState, loadState, persistState, validatedState } from './lib/storage';
 import { isWrittenCorrect, nextDueAt, orderEntries, stateFor } from './lib/engine';
