@@ -45,7 +45,20 @@ export function validateChange(change){
  if(change.image!==undefined&&!['set','remove'].includes(change.image))throw Error('Imagen: usa "set" o "remove".');
  if(change.operation==='delete'&&change.image!==undefined)throw Error('No adjuntes imagen a una eliminación de palabra.');
 }
+export function isAuthorizedCatalogIssue(context){
+ const {action,issue,label,sender}=context.payload;
+ const owner=context.repo.owner;
+ return issue?.state==='open' && typeof issue?.title==='string' && issue.title.startsWith('catalog:') &&
+  (action==='opened'&&issue.user?.login===owner ||
+   action==='labeled'&&label?.name==='catalog:approved'&&sender?.login===owner);
+}
 export async function processCatalogIssue({github,context,core}){
+ if(!isAuthorizedCatalogIssue(context))throw Error('No hay autorización editorial para publicar esta issue.');
+ const live=await github.rest.issues.get({owner:context.repo.owner,repo:context.repo.repo,issue_number:context.issue.number});
+ if(live.data.state!=='open')throw Error('La issue ya está cerrada; no se puede republicar.');
+ if(context.payload.action==='labeled' && (live.data.body||'')!==(context.payload.issue.body||''))
+  throw Error('La issue fue editada tras la aprobación. Revísala y vuelve a aplicar la etiqueta.');
+
  const body=context.payload.issue.body||'';
  const match=body.match(/```json\s*([\s\S]*?)\s*```/);
  if(!match)throw Error('La issue necesita un bloque JSON.');
