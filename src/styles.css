@@ -66,3 +66,9 @@
   .mobile-drawer-footer{margin-top:auto;border-top:1px solid #33334a;padding:19px 10px 0;font-size:11px;color:#9292a9;line-height:1.5}
   .mobile-nav button{min-width:0}
 }
+
+/* Imágenes mnemotécnicas: una única ilustración opcional por tarjeta */
+.association-figure{margin:16px auto 8px;max-width:min(100%,680px);text-align:center}
+.association-figure a{display:block;border-radius:14px;overflow:hidden;border:1px solid #4a4966;background:#10101b}
+.association-figure img{display:block;width:100%;height:auto;max-height:55vh;object-fit:contain}
+.association-figure a:focus-visible{outline:2px solid #b5a1ff;outline-offset:3px}
