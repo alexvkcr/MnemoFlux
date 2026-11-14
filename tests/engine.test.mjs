@@ -27,3 +27,15 @@ test('alfabético no utiliza orden original',()=>{
  const result=orderEntries([{id:'2',word:'Zeta'},{id:'1',word:'Árbol'}],'alphabetical',[],[]);
  assert.equal(result[0].word,'Árbol');
 });
+
+test('los ejercicios asociación → palabra/definición no alteran dominio, vencimiento ni prioridad',()=>{
+ const discoveries=[{wordId:'x',timestamp:0}];
+ const original=[{wordId:'x',grade:'association',timestamp:DAY,direction:'meaning-to-word'}];
+ const assisted=[{wordId:'x',grade:'immediate',timestamp:9*DAY,direction:'association-to-word-meaning'},
+  {wordId:'x',grade:'immediate',timestamp:10*DAY,direction:'association-to-word-meaning'},
+  {wordId:'x',grade:'miss',timestamp:11*DAY,direction:'association-to-word-meaning'}];
+ assert.equal(stateFor('x',discoveries,[...original,...assisted]),stateFor('x',discoveries,original));
+ assert.equal(nextDueAt('x',discoveries,[...original,...assisted]),nextDueAt('x',discoveries,original));
+ const mastered=[0,2,5,8].map((day,i)=>({wordId:'x',grade:i<2?'association':'immediate',timestamp:day*DAY,direction:'meaning-to-word'}));
+ assert.equal(stateFor('x',discoveries,[...mastered,...assisted]),'mastered');
+});
