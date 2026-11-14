@@ -7,29 +7,54 @@ Entrenador de vocabulario con asociaciones inverosímiles, repasos activos y seg
 ## Funcionalidades
 
 - **Descubrir:** estudia nuevas palabras visualizando la definición, la palabra puente y la asociación. No cuenta como acierto de memoria.
-- **Repasar:** responde sin mirar y califica tu recuerdo como inmediato, mediante asociación, con pista o fallo.
+- **Repasar:** definición → palabra, palabra → definición y asociación → palabra/definición. La última dirección muestra la asociación (e imagen, si existe) desde el principio y utiliza respuesta exclusivamente mental/verbal, calificada como completa, parcial o fallo. Sus intentos quedan registrados, pero no afectan al dominio ni al vencimiento de los repasos tradicionales.
 - **Segundas oportunidades:** los fallos reaparecen al final de la sesión sin borrar el intento fallido ni inflar la progresión.
 - **Estados:** Nueva, Aprendiendo, Consolidando y Dominada. Umbrales configurables en `src/config/learning.ts`.
 - **Órdenes:** aleatorio, alfabético, prioridad de falladas, solo pendientes y combinación de falladas y pendientes.
 - **Direcciones:** definición → palabra (predeterminada), o palabra → definición.
 - **Respuestas:** autocalificación mental/verbal o escritura de la palabra; se reconocen variantes explícitas y locuciones con espacios repetidos, manteniendo las tildes.
 - **Personalización:** sesiones de 10, 20, 30, 40 o todas; favoritos, búsqueda, estadísticas, filtros y selección multidioma.
+- **Imágenes:** una ilustración opcional por palabra. Visible en Descubrir, al revelar la asociación en los repasos tradicionales y desde el inicio en el repaso basado en asociación.
 - **Diseño:** tema oscuro adaptable a móvil y escritorio.
 - **Datos privados:** historial, descubrimientos y favoritas en IndexedDB de cada navegador. Copias de seguridad JSON importables/exportables.
 
 ## Catálogo compartido
 
-Las palabras y asociaciones están publicadas como JSON en `public/catalog/es.json`. El catálogo español inicial contiene 39 tarjetas. Se pueden añadir archivos como `public/catalog/en.json` y `public/catalog/de.json` para activar otros idiomas sin cambiar el motor.
+Las palabras y asociaciones están publicadas como JSON en `public/catalog/es.json`. El catálogo español se amplía mediante issues y se comparte entre dispositivos. Se pueden añadir archivos como `public/catalog/en.json` y `public/catalog/de.json` para activar otros idiomas sin cambiar el motor.
 
-### Editar el vocabulario
+### Editar el vocabulario exclusivamente con GitHub Issues
 
-1. Ve a **Vocabulario → Añadir palabra** o utiliza el icono de edición de una tarjeta.
-2. Completa la palabra o locución, significado, palabra puente, asociación y variantes admitidas.
-3. Guarda el cambio en el lote local.
-4. Pulsa **Enviar a GitHub** para abrir una Issue con hasta 3 cambios precargados. Debes confirmar su creación en GitHub con la sesión de **alexvkcr**.
-5. La acción `.github/workflows/catalog-issue.yml` solo procesa Issues creadas por el propietario, valida los datos, actualiza el JSON, cierra la Issue y vuelve a desplegar la web.
+No hay formularios de edición de vocabulario dentro de la aplicación. Las palabras, asociaciones e imágenes se mantienen en el repositorio mediante [GitHub Issues](https://github.com/alexvkcr/MnemoFlux/issues/new).
 
-También puedes trabajar el vocabulario en un editor o con ChatGPT y publicar cambios directamente mediante commits. **No se guardan tokens ni contraseñas en el navegador.**
+La acción `.github/workflows/catalog-issue.yml` solo procesa issues creadas por el propietario cuyo título comience por `catalog:`. La issue debe incluir un bloque JSON con `schema: 1` y entre 1 y 20 cambios. `operation` puede ser `upsert` (alta o actualización), `patch` (cambio parcial de una entrada existente) o `delete` (eliminar entrada). Una actualización parcial no borra los campos omitidos.
+
+**Ejemplo de edición parcial y asignación de una imagen:**
+
+```json
+{
+  "schema": 1,
+  "changes": [
+    {
+      "id": "es-gaban",
+      "language": "es",
+      "operation": "patch",
+      "image": "set"
+    }
+  ]
+}
+```
+
+Antes de publicar la issue, arrastra o pega una imagen en el cuerpo **fuera del bloque JSON** y ajusta el texto alternativo de Markdown para que coincida exactamente con el identificador. Ejemplo:
+
+```markdown
+![es-gaban](https://github.com/user-attachments/assets/UUID-DE-LA-IMAGEN)
+```
+
+**Una única imagen opcional por palabra.** Solo se admiten adjuntos estáticos PNG, JPEG o WebP de hasta 10 MB, transformados a WebP de máximo 1600 píxeles en cualquiera de sus dimensiones. Una issue con múltiples adjuntos para la misma entrada se rechaza.
+
+Para eliminar la imagen sin modificar el texto, usa `"operation":"patch","image":"remove"` (sin adjuntar archivo). Para sustituirla, usa `"image":"set"` con otro adjunto; reemplaza a la anterior en una sola publicación. Si no se especifica `image`, conserva la actual. Un `delete` elimina la entrada y su imagen.
+
+La automatización valida el lote y publica los cambios en un **solo commit**. Los archivos se guardan como `public/images/<id>.webp`. No hacen falta tokens ni contraseñas en la aplicación.
 
 ## Reglas de repaso
 
