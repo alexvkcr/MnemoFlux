@@ -32,7 +32,7 @@ async function normalizeImage(bytes){
 async function imageFromBlob(github,owner,repo,sha){
  const response=await github.rest.git.getBlob({owner,repo,file_sha:sha});
  if(response.data.encoding!=='base64'||typeof response.data.content!=='string')throw Error('El blob de imagen no está codificado en base64.');
- return normalizeImage(Buffer.from(response.data.content.replace(/\\s/g,''),'base64'));
+ return normalizeImage(Buffer.from(response.data.content.replace(/\s/g,''),'base64'));
 }
 async function fetchImage(url){
  const response=await fetch(url,{headers:{Accept:'image/*'},signal:AbortSignal.timeout(20000)});
