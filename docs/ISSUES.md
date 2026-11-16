@@ -139,3 +139,12 @@ La eliminación también retira la imagen que tenga asociada. Para las actualiza
 El propietario también puede publicar imágenes directamente por commit: `public/images/<id>.webp` + el campo `image` de la entrada correspondiente en `public/catalog/<language>.json`, en el **mismo commit**. Esto no sustituye ni deshabilita el sistema de issues. Al publicar un commit en `main`, `deploy.yml` vuelve a desplegar la web.
 
 Para las invariantes y las decisiones de escalabilidad, consulta [las reglas del proyecto](../rules/PROJECT_RULES.md).
+
+## Publicación de imagen desde un agente autorizado (sin adjunto nativo)
+
+Cuando un agente conectado a GitHub no puede adjuntar archivos binarios a una issue, existe una **vía alternativa solo para issues creadas por el propietario**. Primero se crea un blob binario de Git mediante la API del repositorio; después se crea una issue `catalog:` normal con `"image":"set"` y el campo `"imageBlobSha":"<SHA de 40 caracteres>"` en la entrada. La Action recupera el blob de ese mismo repositorio, valida la imagen, la optimiza y crea **un único commit** con imagen y catálogo.
+
+- Esta opción no deshabilita el método público de arrastrar imágenes a GitHub Issues; **para colaboradores, ese es el método recomendado**.
+- Nunca usar `imageBlobSha` para propuestas creadas por terceros; la Action lo rechazará.
+- El SHA del blob **no** se guarda en el catálogo final.
+- Una prueba usando un blob de Git **verifica el procesamiento mediante una issue**, pero **no** verifica la subida de un adjunto nativo a GitHub Issues.

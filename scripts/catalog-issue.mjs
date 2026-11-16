@@ -20,19 +20,27 @@ export function attachmentMap(body){
  }
  return images;
 }
-async function fetchImage(url){
- const response=await fetch(url,{headers:{Accept:'image/*'},signal:AbortSignal.timeout(20000)});
- if(!response.ok)throw Error(`No se pudo descargar la imagen adjunta: HTTP ${response.status}`);
- const declared=Number(response.headers.get('content-length')||0);
- if(declared>LIMIT)throw Error('La imagen original supera 10 MB.');
- const bytes=Buffer.from(await response.arrayBuffer());
- if(!bytes.length||bytes.length>LIMIT)throw Error('La imagen está vacía o supera 10 MB.');
+async function normalizeImage(bytes){
+ if(!Buffer.isBuffer(bytes)||!bytes.length||bytes.length>LIMIT)throw Error('La imagen está vacía o supera 10 MB.');
  const metadata=await sharp(bytes,{limitInputPixels:30_000_000}).metadata();
  if(!['png','jpeg','webp'].includes(metadata.format)||metadata.pages>1)throw Error('Solo se admiten PNG, JPEG o WebP estáticos.');
  if(!metadata.width||!metadata.height||metadata.width>8192||metadata.height>8192)throw Error('Dimensiones de imagen no admitidas.');
  const optimized=await sharp(bytes).rotate().resize({width:1600,height:1600,fit:'inside',withoutEnlargement:true}).webp({quality:82,effort:5}).toBuffer();
  if(optimized.length>2*1024*1024)throw Error('La imagen optimizada supera 2 MB.');
  return optimized;
+}
+async function imageFromBlob(github,owner,repo,sha){
+ const response=await github.rest.git.getBlob({owner,repo,file_sha:sha});
+ if(response.data.encoding!=='base64'||typeof response.data.content!=='string')throw Error('El blob de imagen no está codificado en base64.');
+ return normalizeImage(Buffer.from(response.data.content.replace(/\s/g,''),'base64'));
+}
+async function fetchImage(url){
+ const response=await fetch(url,{headers:{Accept:'image/*'},signal:AbortSignal.timeout(20000)});
+ if(!response.ok)throw Error(`No se pudo descargar la imagen adjunta: HTTP ${response.status}`);
+ const declared=Number(response.headers.get('content-length')||0);
+ if(declared>LIMIT)throw Error('La imagen original supera 10 MB.');
+ const bytes=Buffer.from(await response.arrayBuffer());
+ return normalizeImage(bytes);
 }
 export function validateChange(change){
  if(!change||!validId(change.id)||!LANGUAGES.has(change.language)||!change.id.startsWith(change.language+'-'))throw Error('Identificador o idioma inválido.');
@@ -43,6 +51,8 @@ export function validateChange(change){
  if(change.category!==undefined&&(typeof change.category!=='string'||change.category.length>120))throw Error('Categoría inválida.');
  if(change.variants!==undefined&&(!Array.isArray(change.variants)||change.variants.some(v=>typeof v!=='string'||v.length>150)))throw Error('Variantes inválidas.');
  if(change.image!==undefined&&!['set','remove'].includes(change.image))throw Error('Imagen: usa "set" o "remove".');
+ if(change.imageBlobSha!==undefined && (!/^[0-9a-f]{40}$/i.test(change.imageBlobSha)||change.image!=='set'))
+  throw Error('imageBlobSha requiere SHA de Git válido e image: "set".');
  if(change.operation==='delete'&&change.image!==undefined)throw Error('No adjuntes imagen a una eliminación de palabra.');
 }
 export function isAuthorizedCatalogIssue(context){
@@ -73,6 +83,7 @@ export async function processCatalogIssue({github,context,core}){
  const files=new Map();const tree=[];
  for(const change of data.changes){
   validateChange(change);
+  if(change.imageBlobSha && context.payload.issue.user.login !== owner)throw Error('Solo el propietario puede incorporar blobs mediante SHA; los colaboradores deben adjuntar la imagen a la issue.');
   if(ids.has(change.id))throw Error(`Entrada duplicada: ${change.id}`);
   ids.add(change.id);
   if(!files.has(change.language)){
@@ -97,14 +108,16 @@ export async function processCatalogIssue({github,context,core}){
   }
   if(!previous&&!REQUIRED.every(key=>typeof change[key]==='string'&&change[key].trim()))throw Error(`Para crear ${change.id} hay que aportar palabra, significado, puente y asociación.`);
   if(change.operation==='patch'&&!previous)throw Error(`No existe la entrada que quieres modificar: ${change.id}`);
-  const next={...previous,...Object.fromEntries(Object.entries(change).filter(([key])=>!['operation','image'].includes(key))),id:change.id,language:change.language};
+  const next={...previous,...Object.fromEntries(Object.entries(change).filter(([key])=>!['operation','image','imageBlobSha'].includes(key))),id:change.id,language:change.language};
   for(const key of REQUIRED)next[key]=next[key].trim();
   next.category=next.category||'';
   next.variants=next.variants||[];
   if(change.image==='set'){
    const url=images.get(change.id);
-   if(!url)throw Error(`Falta adjuntar la imagen de ${change.id} como ![${change.id}](URL).`);
-   const processed=await fetchImage(url);
+   if(Boolean(url)===Boolean(change.imageBlobSha))throw Error(`Debes usar exactamente una fuente de imagen para ${change.id}: adjunto o imageBlobSha.`);
+   const processed=change.imageBlobSha
+    ? await imageFromBlob(github,owner,repo,change.imageBlobSha)
+    : await fetchImage(url);
    const blob=await github.rest.git.createBlob({owner,repo,content:processed.toString('base64'),encoding:'base64'});
    tree.push({path:imagePath(change.id),mode:'100644',type:'blob',sha:blob.data.sha});
    next.image=canonicalImage(change.id);
