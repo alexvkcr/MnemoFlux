@@ -24,3 +24,10 @@ test('solo el propietario puede aprobar issues externas mediante la etiqueta',as
  assert.equal(isAuthorizedCatalogIssue({...base,payload:{...base.payload,action:'labeled',label:{name:'enhancement'},sender:{login:'alexvkcr'}}}),false);
  assert.equal(isAuthorizedCatalogIssue({...base,payload:{...base.payload,action:'labeled',label:{name:'catalog:approved'},sender:{login:'alexvkcr'},issue:{...base.payload.issue,state:'closed'}}}),false);
 });
+
+test('el agente propietario puede referenciar un objeto Git binario sin adjunto nativo',()=>{
+ const valid='a'.repeat(40);
+ assert.doesNotThrow(()=>validateChange({id:'es-obsecuente',language:'es',operation:'upsert',image:'set',imageBlobSha:valid}));
+ assert.throws(()=>validateChange({id:'es-obsecuente',language:'es',operation:'upsert',image:'set',imageBlobSha:'invalido'}),/imageBlobSha/);
+ assert.throws(()=>validateChange({id:'es-obsecuente',language:'es',operation:'upsert',imageBlobSha:valid}),/imageBlobSha/);
+});

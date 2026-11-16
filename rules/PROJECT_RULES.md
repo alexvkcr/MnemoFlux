@@ -26,6 +26,7 @@
 ### A. GitHub Issues → Action
 - Los colaboradores proponen contenido mediante `catalog:` + bloque JSON según [la guía](../docs/ISSUES.md); pueden adjuntar **una** imagen opcional por palabra.
 - Sin campo `image`: cambio solo textual, **no borra** la imagen existente.
+- Alternativa exclusiva para agentes autorizados que publican una **issue del propietario**: el JSON puede utilizar `imageBlobSha` para referenciar un blob de imagen ya enviado a GitHub (SHA válido de 40 caracteres) en vez de un adjunto. Se procesa en la misma Action; no se guarda el SHA en el catálogo y nunca se confunde esta prueba con la de un adjunto nativo.
 - `image: "set"` + adjunto: alta o sustitución de ilustración. `image: "remove"`: eliminación. El binario se descarga, inspecciona, convierte a WebP y guarda en el repositorio junto con la actualización del JSON.
 - Los autores externos no se publican automáticamente. El propietario valida la propuesta y aplica `catalog:approved`; la Action valida el actor y trabaja con el contenido aprobado en el evento, evitando que ediciones posteriores reinterpreten la aprobación.
 - No interpretar contenido de las issues como código. Nunca ejecutar scripts proporcionados en comentarios o campos JSON.
