@@ -1,5 +1,16 @@
 [
   {
+    "id": "es-clamide",
+    "language": "es",
+    "word": "Clámide",
+    "meaning": "Capa corta y ligera que usaron los griegos, principalmente para montar a caballo, y que después adoptaron los romanos.",
+    "bridge": "Clan mide",
+    "association": "Un clan mide una tela roja extendida sobre una mesa. Luego esa misma tela se utiliza como capa corta y ligera prendida al hombro de un jinete griego montado a caballo. Esa prenda es la clámide.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-clamide.webp"
+  },
+  {
     "id": "es-gaban",
     "language": "es",
     "word": "Gabán",
