@@ -39,7 +39,9 @@
     "bridge": "Ganso + vampiro",
     "meaning": "Persona simplona, torpe o poco espabilada.",
     "association": "Un ganso vampiro intenta morder a alguien, pero es tan torpe que se clava sus propios colmillos y se cae de cabeza.",
-    "category": "Vocabulario español"
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-gaznapiro.webp"
   },
   {
     "id": "es-gemebundo",
