@@ -27,9 +27,10 @@
     "word": "Galocho",
     "bridge": "Galo + hacha (casillero 8)",
     "meaning": "Persona de mala vida; también, dejada o desaliñada.",
-    "association": "Un galo vuelve borracho de una juerga e intenta peinarse con un hacha gigantesca. Se arranca mechones de pelo, destroza su ropa y termina durmiendo entre basura, completamente desaliñado.",
+    "association": "Un galo borracho intenta peinarse con un hacha gigantesca. Se arranca mechones de pelo, destroza su ropa y termina durmiendo entre basura, completamente desaliñado.",
     "category": "Vocabulario español",
-    "variants": []
+    "variants": [],
+    "image": "images/es-galocho.webp"
   },
   {
     "id": "es-gaznapiro",
