@@ -60,8 +60,10 @@
     "word": "Gentío",
     "bridge": "Gente + tío",
     "meaning": "Gran cantidad de personas reunidas en un lugar.",
-    "association": "Un tío abre su chaqueta y salen miles de personas, formando un gentío que inunda toda la calle.",
-    "category": "Vocabulario español"
+    "association": "Un tío abre su chaqueta y de su interior salen miles de personas que abarrotan toda la calle.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-gentio.webp"
   },
   {
     "id": "es-glugluteo",
