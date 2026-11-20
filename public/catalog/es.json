@@ -82,8 +82,10 @@
     "word": "Gobernalle",
     "bridge": "Gobernar + llave",
     "meaning": "Timón de una embarcación.",
-    "association": "Un capitán intenta gobernar su barco girando una llave gigantesca que hace de timón y mueve toda la nave.",
-    "category": "Vocabulario español"
+    "association": "Un capitán intenta gobernar su barco girando una llave gigantesca que hace de timón y mueve toda la nave generando una gran ola.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-gobernalle.webp"
   },
   {
     "id": "es-grebas",
