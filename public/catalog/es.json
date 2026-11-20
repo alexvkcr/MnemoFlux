@@ -93,9 +93,10 @@
     "word": "Grebas",
     "bridge": "Grapas",
     "meaning": "Piezas de una armadura antigua que protegían las piernas.",
-    "association": "Un caballero se coloca dos grapas metálicas gigantes sobre las espinillas. Un enemigo intenta cortarle las piernas con una espada, pero las grapas detienen todos los golpes.",
+    "association": "Un caballero se coloca dos grapas de oficina gigantes sobre las espinillas, a modo de armadura. Un enemigo descarga un espadazo brutal contra ellas, pero las grapas bloquean la espada y hacen saltar chispas.",
     "category": "Vocabulario español",
-    "variants": []
+    "variants": [],
+    "image": "images/es-grebas.webp"
   },
   {
     "id": "es-gregario",
