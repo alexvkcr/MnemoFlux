@@ -137,9 +137,10 @@
     "word": "Helminto",
     "bridge": "El Mentos",
     "meaning": "Gusano parásito, especialmente del organismo humano.",
-    "association": "Te tragas un Mentos que, al llegar a tu barriga, se transforma en un gusano parásito gigantesco. Se retuerce dentro de ti y hace que tu abdomen se mueva como si tuvieses una serpiente bajo la piel.",
+    "association": "Un hombre se traga un Mentos que, al llegar a su barriga, se transforma en un gusano parásito gigantesco. Sale de sus entrañas y se va desplazando como hacen los gusanos.",
     "category": "Vocabulario español",
-    "variants": []
+    "variants": [],
+    "image": "images/es-helminto.webp"
   },
   {
     "id": "es-henchir",
