@@ -115,8 +115,10 @@
     "word": "Hacedero",
     "bridge": "Hace + dedo",
     "meaning": "Que puede hacerse o resulta fácil de realizar.",
-    "association": "Un albañil hace un movimiento con el dedo y construye un rascacielos entero en un segundo, sin ningún esfuerzo.",
-    "category": "Vocabulario español"
+    "association": "En un solar de obras vacío, un obrero saca el dedo corazón insultando a la tierra. Al levantarlo hacia arriba, de ese mismo punto brota un rascacielos entero siguiendo la trayectoria de su dedo, como si levantar edificios fuese para él facilísimo.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-hacedero.webp"
   },
   {
     "id": "es-halito",
