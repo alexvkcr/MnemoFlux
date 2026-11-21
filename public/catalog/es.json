@@ -126,8 +126,10 @@
     "word": "Hálito",
     "bridge": "Alita",
     "meaning": "Aliento o aire que sale de la boca.",
-    "association": "Una alita de pollo abre una boca gigantesca y expulsa un hálito tan potente que derriba al cocinero.",
-    "category": "Vocabulario español"
+    "association": "Una alita de pollo abre la boca, toma una enorme bocanada de aire y sopla con tanta fuerza que lanza por los aires al cocinero.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-halito.webp"
   },
   {
     "id": "es-helminto",
