@@ -11,6 +11,17 @@
     "image": "images/es-clamide.webp"
   },
   {
+    "id": "es-fungible",
+    "language": "es",
+    "word": "Fungible",
+    "meaning": "Que se consume con el uso o que puede sustituirse por otro equivalente de la misma especie, calidad y cantidad.",
+    "bridge": "Fungi",
+    "association": "Un coche de Fórmula 1 corre sobre cuatro Fungi gigantescos colocados de lado, con los rabitos apuntando hacia fuera. A toda velocidad, uno de ellos se desgasta brutalmente hasta quedar destrozado y desprender pedazos por toda la pista. El coche entra en boxes y los mecánicos retiran la rueda consumida y la sustituyen por otro Fungi idéntico, que ocupa exactamente su lugar.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-fungible.webp"
+  },
+  {
     "id": "es-gaban",
     "language": "es",
     "word": "Gabán",
