@@ -157,10 +157,12 @@
     "id": "es-henchir",
     "language": "es",
     "word": "Henchir",
-    "bridge": "Hinchar",
+    "bridge": "Hinchar + chirla",
     "meaning": "Llenar o colmar algo por completo.",
-    "association": "Una persona intenta hinchar un globo soplando, pero este continúa llenándose hasta ocupar toda una ciudad.",
-    "category": "Vocabulario español"
+    "association": "Una persona intenta hinchar una chirla soplando entre sus conchas en una playa. La chirla comienza a inflarse desmesuradamente hasta alcanzar un tamaño tan gigantesco que proyecta una inmensa sombra sobre toda la ciudad situada junto al mar.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-henchir.webp"
   },
   {
     "id": "es-hender",
