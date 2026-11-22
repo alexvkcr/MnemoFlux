@@ -168,13 +168,14 @@
     "id": "es-hender",
     "language": "es",
     "word": "Hender",
-    "bridge": "Tender / hundir",
+    "bridge": "Hundir + tender",
     "meaning": "Abrir o rajar un cuerpo sin dividirlo completamente; también, atravesar un fluido.",
-    "association": "Al tender una sábana, una espada gigantesca cae sobre ella y la hiende, abriendo una enorme raja sin partirla del todo.",
+    "association": "Al tender una sábana gigantesca, una espada colosal cae del cielo y, al hundir su filo en la tela, abre una raja descomunal sin llegar a partirla en dos.",
     "category": "Vocabulario español",
     "variants": [
       "Hendir"
-    ]
+    ],
+    "image": "images/es-hender.webp"
   },
   {
     "id": "es-heptadactil",
