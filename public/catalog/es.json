@@ -397,6 +397,17 @@
     "variants": []
   },
   {
+    "id": "es-liminal",
+    "language": "es",
+    "word": "Liminal",
+    "meaning": "Que se encuentra en el umbral o en una fase de transición entre dos estados.",
+    "bridge": "Lima + nalga",
+    "association": "Un hombre con nalgas descomunales sujeta entre ellas una lima verde gigantesca. Intenta atravesar el umbral de una puerta, pero sus nalgas quedan totalmente encajadas contra ambos lados del marco. Se agarra a la madera y patalea desesperadamente sin lograr cruzar.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-liminal.webp"
+  },
+  {
     "id": "es-obsecuente",
     "language": "es",
     "word": "Obsecuente",
