@@ -205,8 +205,10 @@
     "word": "Herrete",
     "bridge": "Herrero + té",
     "meaning": "Remate, generalmente metálico, colocado en los extremos de cordones o cintas para facilitar su introducción en los ojales.",
-    "association": "Un herrero derrama su té hirviendo sobre la punta de un cordón y esta se transforma en un pequeño tubo metálico que atraviesa los ojales.",
-    "category": "Vocabulario español"
+    "association": "Un herrero derrama su té hirviendo sobre la punta de un cordón y esta se transforma en un tubo metálico tres veces más grueso que revienta los ojales de su zapato.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-herrete.webp"
   },
   {
     "id": "es-hidrocele",
