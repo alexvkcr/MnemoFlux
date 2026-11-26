@@ -1,6 +1,7 @@
 import type { Attempt, Discovery, VocabEntry } from '../types';
 import { LEARNING } from '../config/learning';
 import * as engine from './engine.mjs';
+export const isAssistedDirection = engine.isAssistedDirection;
 export const normalizedAnswer = engine.normalizedAnswer as (value: string) => string;
 export const isWrittenCorrect = engine.isWrittenCorrect as (answer: string, entry: VocabEntry) => boolean;
 export const stateFor = (id: string, discovered: Discovery[], attempts: Attempt[]) => engine.stateFor(id, discovered, attempts, LEARNING);
