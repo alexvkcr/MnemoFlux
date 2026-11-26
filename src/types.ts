@@ -11,7 +11,7 @@ export interface VocabEntry {
   category?: string;
 }
 export type RecallGrade = 'immediate' | 'association' | 'hint' | 'miss';
-export type Direction = 'meaning-to-word' | 'word-to-meaning' | 'association-to-word-meaning';
+export type Direction = 'meaning-to-word' | 'word-to-meaning' | 'association-to-word-meaning' | 'keys-to-word-meaning';
 export type Activity = 'discover' | 'review';
 export interface Attempt {
   id: string;
