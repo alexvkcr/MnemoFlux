@@ -1,3 +1,4 @@
+export function isAssistedDirection(direction?: string): boolean;
 export function normalizedAnswer(value: string): string;
 export function isWrittenCorrect(answer: string, entry: {word:string; variants?:string[]}): boolean;
 export function stateFor(wordId:string, discoveries:unknown[], attempts:unknown[], policy?:unknown): string;
