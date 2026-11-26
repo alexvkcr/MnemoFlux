@@ -225,10 +225,12 @@
     "id": "es-hiperonimo",
     "language": "es",
     "word": "Hiperónimo",
-    "bridge": "Híper + nombre",
+    "bridge": "Híper",
     "meaning": "Palabra que designa una categoría general que incluye otras palabras más específicas.",
-    "association": "Un hipo (hipopótamo) diminuto lleva escrito el nombre «CANICHE» y entra en un hipermercado gigantesco llamado «PERRO», que contiene todas las razas de perros.",
-    "category": "Vocabulario español"
+    "association": "En un hipermercado gigantesco, un empleado lanza frutas de una en una con una catapulta hacia una cesta descomunal. En la trayectoria vuelan una manzana, un plátano, una pera y una naranja, cada una en un punto distinto, hasta quedar todas agrupadas en la cesta.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-hiperonimo.webp"
   },
   {
     "id": "es-hiponimo",
