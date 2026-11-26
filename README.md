@@ -7,14 +7,14 @@ Entrenador de vocabulario con asociaciones inverosímiles, repasos activos y seg
 ## Funcionalidades
 
 - **Descubrir:** estudia nuevas palabras visualizando la definición, la palabra puente y la asociación. No cuenta como acierto de memoria.
-- **Repasar:** definición → palabra, palabra → definición y asociación → palabra/definición. La última dirección muestra la asociación (e imagen, si existe) desde el principio y utiliza respuesta exclusivamente mental/verbal, calificada como completa, parcial o fallo. Sus intentos quedan registrados, pero no afectan al dominio ni al vencimiento de los repasos tradicionales.
+- **Repasar:** definición → palabra, palabra → definición y asociación → palabra/definición. También existe claves → palabra/definición, que muestra solo la palabra puente al preguntar y la película al revelar. La dirección basada en asociación muestra la asociación (e imagen, si existe) desde el principio y utiliza respuesta exclusivamente mental/verbal, calificada como completa, parcial o fallo. Los intentos de ambas modalidades quedan registrados, pero no afectan al dominio ni al vencimiento de los repasos tradicionales.
 - **Segundas oportunidades:** los fallos reaparecen al final de la sesión sin borrar el intento fallido ni inflar la progresión.
 - **Estados:** Nueva, Aprendiendo, Consolidando y Dominada. Umbrales configurables en `src/config/learning.ts`.
 - **Órdenes:** aleatorio, alfabético, prioridad de falladas, solo pendientes y combinación de falladas y pendientes.
-- **Direcciones:** definición → palabra (predeterminada), palabra → definición y asociación → palabra/definición (solo mental/verbal; no afecta al dominio).
+- **Direcciones:** definición → palabra (predeterminada), palabra → definición y asociación → palabra/definición y claves → palabra/definición (ambas solo mental/verbal; no afectan al dominio).
 - **Respuestas:** autocalificación mental/verbal o escritura de la palabra; se reconocen variantes explícitas y locuciones con espacios repetidos, manteniendo las tildes.
 - **Personalización:** sesiones de 10, 20, 30, 40 o todas; favoritos, búsqueda, estadísticas, filtros y selección multidioma.
-- **Imágenes:** una ilustración opcional por palabra. Visible en Descubrir, al revelar la asociación en los repasos tradicionales y desde el inicio en el repaso basado en asociación.
+- **Imágenes:** una ilustración opcional por palabra. Visible en Descubrir, al revelar la asociación en los repasos tradicionales y desde el inicio en el repaso basado en asociación y solo al revelar la respuesta en el repaso por claves.
 - **Diseño:** tema oscuro adaptable a móvil y escritorio.
 - **Datos privados:** historial, descubrimientos y favoritas en IndexedDB de cada navegador. Copias de seguridad JSON importables/exportables.
 
