@@ -1,5 +1,16 @@
 [
   {
+    "id": "es-alipori",
+    "language": "es",
+    "word": "Alipori",
+    "meaning": "Vergüenza ajena o bochorno que se siente ante una situación ridícula o embarazosa protagonizada por otra persona.",
+    "bridge": "Alioli + poro",
+    "association": "Un cocinero acaba de preparar una fideuá espectacular. Cuando llega el momento de añadir el alioli, se aprieta un enorme poro de su moflete y empieza a salir alioli directamente sobre la fideuá. Los comensales, muertos de vergüenza ajena (alipori), se levantan y huyen lentamente, intentando disimular mientras se tapan la cara.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-alipori.webp"
+  },
+  {
     "id": "es-clamide",
     "language": "es",
     "word": "Clámide",
