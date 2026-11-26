@@ -55,6 +55,7 @@
 - El historial personal reside en **IndexedDB, versión 1**; no cambiar la clave ni eliminar registros por publicar un catálogo nuevo.
 - Los intentos antiguos que no indiquen nueva dirección se interpretan como repasos tradicionales. No inventar retrospectivamente resultados de la modalidad asistida.
 - El repaso `association-to-word-meaning` muestra la escena textual e imagen (si la hay) **al formular la pregunta** y solo admite respuesta mental/verbal.
+- El repaso `keys-to-word-meaning` muestra únicamente `bridge` al formular la pregunta; la palabra, el significado, la escena y su imagen se revelan después. Solo admite respuesta mental/verbal. Ambos modos muestran el puente original al revelar la respuesta.
 - Sus resultados completos, parciales o fallos se registran por separado y **no aumentan ni reducen el dominio**, no alteran intervalos y no falsean las estadísticas de repaso convencional.
 - En las direcciones tradicionales, mostrar la imagen solo al revelar la asociación; en Descubrir, mostrarla como parte de la escena.
 
