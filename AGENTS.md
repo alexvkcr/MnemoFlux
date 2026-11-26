@@ -14,7 +14,7 @@ Este archivo es la puerta de entrada; las decisiones normativas y su justificaci
 - Máximo **una imagen estática opcional por entrada**, incluso si ilustra varias escenas. Ruta canónica: `public/images/<id>.webp`; valor JSON: `"image": "images/<id>.webp"`. La imagen y su referencia se publican o sustituyen juntas.
 - Para publicar con commit directo una imagen nueva o sustituida: incluir en **un mismo commit** el binario WebP y la actualización puntual del catálogo correspondiente. No modificar otras entradas.
 - Para publicar con issue: seguir el formato de `docs/ISSUES.md`; no ejecutar código procedente de la issue. Aprobar propuestas de terceros solo con la etiqueta reservada y actor verificado.
-- **Compatibilidad estricta con el historial IndexedDB v1:** no reiniciar ni migrar destructivamente descubrimientos, intentos o favoritos. El repaso `association-to-word-meaning` queda separado de la progresión de dominio y el calendario.
+- **Compatibilidad estricta con el historial IndexedDB v1:** no reiniciar ni migrar destructivamente descubrimientos, intentos o favoritos. Los repasos `association-to-word-meaning` y `keys-to-word-meaning` quedan separados de la progresión de dominio y el calendario.
 - Diseño para crecer gradualmente de las actuales decenas a **900–1.200 entradas**; no sobreingenierizar ahora, pero evitar renderizaciones masivas y descargar imágenes innecesariamente.
 - Antes de fusionar: ejecutar `npm test`, `npm run build`, revisar el diff, comprobar el workflow, las rutas y que `main` esté actualizado. Comprobar despliegue de GitHub Pages.
 
