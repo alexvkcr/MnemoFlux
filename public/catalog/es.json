@@ -280,10 +280,12 @@
     "id": "es-holonimo",
     "language": "es",
     "word": "Holónimo",
-    "bridge": "Holograma + Nemo",
+    "bridge": "Holo → holograma, Nimo → mimo",
     "meaning": "Palabra que designa un todo respecto de las palabras que nombran sus partes.",
-    "association": "Un holograma de Nemo se descompone en aletas, cola y cabeza, que vuelven a unirse para formar el pez entero.",
-    "category": "Vocabulario español"
+    "association": "Un mimo empuja con todas sus fuerzas una enorme pared holográfica de ladrillos, proyectada por un proyector situado en el suelo, pero no consigue moverla. Cuando deja de empujar, la pared desaparece y aparece un gigantesco castillo construido con paredes de esos mismos ladrillos. El mimo intenta empujar el castillo, pero tampoco consigue moverlo.",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-holonimo.webp"
   },
   {
     "id": "es-horadar",
