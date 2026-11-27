@@ -269,10 +269,12 @@
     "id": "es-hisopo",
     "language": "es",
     "word": "Hisopo",
-    "bridge": "Y sopa",
+    "bridge": "Y sopa → Mi sopa",
     "meaning": "Planta aromática; también, utensilio utilizado para rociar agua bendita.",
-    "association": "Un sacerdote grita «¡Y sopa!» mientras agita una enorme planta aromática que lanza chorros de agua bendita por toda la iglesia.",
-    "category": "Vocabulario español"
+    "association": "En una iglesia llena de gente, un cura coge una enorme planta aromática, la mete en un plato gigante de sopa que tiene sobre el altar y empieza a rociar a todos los fieles con las gotas que caen de la planta, como si estuviera bendiciéndolos. Mientras los salpica por toda la iglesia, les grita una y otra vez: «¡Mi sopa! ¡Mi sopa!».",
+    "category": "Vocabulario español",
+    "variants": [],
+    "image": "images/es-hisopo.webp"
   },
   {
     "id": "es-holonimo",
