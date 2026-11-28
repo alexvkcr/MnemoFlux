@@ -293,9 +293,10 @@
     "word": "Horadar",
     "bridge": "Hora + dar",
     "meaning": "Perforar o agujerear algo atravesándolo de parte a parte.",
-    "association": "Estás en el puente junto al Big Ben cuando empiezan a caer rocas gigantescas. Miras hacia arriba y descubres que el enorme segundero del reloj está atravesando las rocas de lado a lado, horadándolas y haciendo que caigan sus fragmentos.",
+    "association": "Estás viendo el Big Ben desde el puente y descubres que, en lugar de agujas, tiene un gigantesco berbiquí con tres manivelas que giran a distintas velocidades, perforando el propio reloj. La de las horas apenas ha penetrado, la de los minutos va por la mitad y la de los segundos está a punto de atravesarlo completamente. Al pie de la torre se acumula una montaña de escombros, mientras otros fragmentos siguen cayendo por el aire.",
     "category": "Vocabulario español",
-    "variants": []
+    "variants": [],
+    "image": "images/es-horadar.webp"
   },
   {
     "id": "es-hornacina",
